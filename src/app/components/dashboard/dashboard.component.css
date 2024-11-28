@@ -1,0 +1,75 @@
+/* Dashboard Container */
+.dashboard-container {
+  padding: 20px;
+  background-color: #f0f2f5; /* Light background for the dashboard */
+  /* display: block; */
+}
+
+/* Grid Cards */
+.grid-card {
+  background: #fff; /* White background for cards */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  margin-bottom: 20px; /**Spacing between cards*/
+  /* margin-left: 20px; */
+  text-align: center; /* Center align content */
+}
+
+.grid-card h3 {
+  margin: 0 0 10px; /* Margin for headers */
+  color: #595959; /* Text color */
+  font-weight: bold; /* Bold text */
+}
+
+/* Card Content */
+.card-content span {
+  font-size: 18px; /* Font size for the numbers */
+  font-weight: bold; /* Bold text */
+}
+
+/* Income and Expense Charts */
+.chart-container {
+  background: #fff; /* White background for charts */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside the chart container */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  margin-bottom: 20px; /* Spacing between charts */
+}
+
+/* Recent History Styling */
+.recent-history {
+  /*margin-top: 5px;*/ /* Spacing above recent history */
+  padding: 20px; /* Padding inside recent history card */
+  background: #fff; /* White background */
+  border-radius: 8px; /* Rounded corners */
+  margin-left: 90px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+.recent-history div {
+  margin-bottom: 10px; /* Space between items */
+  font-size: 16px; /* Font size for recent history items */
+}
+
+.recent-history .income {
+  color: green; /* Income color */
+}
+
+.recent-history .expense {
+  color: red; /* Expense color */
+}
+
+/* Additional Info Section */
+.info-section {
+  margin-top: 20px; /* Spacing above the section */
+}
+
+.info-section div {
+  font-size: 16px; /* Font size */
+  margin-bottom: 10px; /* Spacing between columns */
+}
+.history{
+  margin-top: 20px;
+}
+

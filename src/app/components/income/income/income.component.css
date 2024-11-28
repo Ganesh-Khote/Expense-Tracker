@@ -1,0 +1,21 @@
+.expense-card {
+  margin-bottom: 16px;
+  /* float:left; */
+}
+.alldata{
+  float:left;
+}
+
+.expense-info {
+  margin-top: 10px;
+}
+
+.expense-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.expense-actions button {
+  margin-left: 8px;
+}

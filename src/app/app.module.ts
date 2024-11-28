@@ -3,16 +3,44 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DemoNgZorroAntdModule } from 'DemoNgZorroAntdModule';
+import { ExpenseComponent } from './components/expense/expense.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { UpdateExpenseComponent } from './components/expense/update-expense/update-expense.component';
+import { IncomeComponent } from './components/income/income/income.component';
+import { IncomeupdateComponent } from './components/income/incomeupdate/incomeupdate.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+
+registerLocaleData(en);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ExpenseComponent,
+    UpdateExpenseComponent,
+    IncomeComponent,
+    IncomeupdateComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    DemoNgZorroAntdModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

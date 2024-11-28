@@ -1,0 +1,55 @@
+<!-- <p>update-expense works!</p>
+  -->
+  <div>
+    <form [formGroup]="incomeform" (ngSubmit)="onSubmit()" nz-title="Update Income" nz-form [nzLayout]="'vertical'">
+      <!-- Title -->
+      <nz-form-item>
+        <nz-form-label [nzFor]="'title'" nzRequired>Title</nz-form-label>
+        <nz-form-control nzErrorTip="Please input the title!">
+          <input nz-input formControlName="title" id="title" placeholder="Enter title" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <!-- Description -->
+      <nz-form-item>
+        <nz-form-label [nzFor]="'description'" nzRequired>Description</nz-form-label>
+        <nz-form-control nzErrorTip="Please input the description!">
+          <textarea nz-input formControlName="description" id="description" placeholder="Enter description"></textarea>
+        </nz-form-control>
+      </nz-form-item>
+
+      <!-- Category -->
+      <nz-form-item>
+        <nz-form-label [nzFor]="'category'" nzRequired>Category</nz-form-label>
+        <nz-form-control nzErrorTip="Please select a category!">
+          <nz-select formControlName="category" id="category" nzPlaceHolder="Select a category">
+            <nz-option *ngFor="let cat of categories" [nzValue]="cat" [nzLabel]="cat"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+
+      <!-- Date -->
+      <nz-form-item>
+        <nz-form-label [nzFor]="'date'" nzRequired>Date</nz-form-label>
+        <nz-form-control nzErrorTip="Please select a date!">
+          <nz-date-picker formControlName="date" id="date" nzFormat="yyyy-MM-dd"></nz-date-picker>
+        </nz-form-control>
+      </nz-form-item>
+
+      <!-- Amount -->
+      <nz-form-item>
+        <nz-form-label [nzFor]="'amount'" nzRequired>Amount</nz-form-label>
+        <nz-form-control nzErrorTip="Please input a valid amount!">
+          <nz-input-number formControlName="amount" [nzMin]="0" id="amount" nzPlaceHolder="Enter amount"></nz-input-number>
+        </nz-form-control>
+      </nz-form-item>
+
+      <!-- Submit Button -->
+      <nz-form-item>
+        <nz-form-control>
+          <button nz-button nzType="primary" [disabled]="!incomeform.valid">Update Expense</button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </div>
+
